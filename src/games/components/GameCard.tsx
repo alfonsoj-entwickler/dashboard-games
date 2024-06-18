@@ -1,18 +1,29 @@
 "use client";
 import { SimpleGame } from "../interfaces/simple-game";
+import Image from "next/image";
 
 interface Props {
   game: SimpleGame;
+  img: string;
 }
 
-export default function GameCard({ game }: Props) {
+export default function GameCard({ game, img }: Props) {
   const { id, name } = game;
 
   return (
-    <div className="mx-auto right-0 mt-2 w-60">
-      <div className="bg-white rounded overflow-hidden shadow-lg">
-        <div></div>
-        <div></div>
+    <div className="relative mx-auto right-0 mt-2 overflow-hidden rounded-lg">
+      <Image 
+        src={img}
+        alt={`img ${name}`}
+        width={600}
+        height={600}
+        className="relative z-0"
+      />
+      <div className="absolute bottom-0 left-0 w-full h-[60%] bg-linear-black z-10" />
+      <div className="flex flex-col gap-2 absolute bottom-0 left-0 w-full h-[40%] p-6 text-white z-20">
+        <span className="self-start p-1 text-xs text-white bg-slate-500">PC / XBOX / PS5</span>
+        <h2 className="text-4xl font-semibold uppercase">Headline</h2>
+        <p>Text</p>
       </div>
     </div>
   );

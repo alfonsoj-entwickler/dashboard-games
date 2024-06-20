@@ -9,10 +9,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        xbox: "#107b10",
+        playstation: "#0070d1",
+        nintendo: "#e60012",
+        pc: "#6b7280",
+        sega: "#1b3360",
+        transparent: "transparent",
       },
     },
   },

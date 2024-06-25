@@ -17,8 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <div className="h-screen flex">
-          <div className="flex flex-col gap-2 w-1/5 h-full bg-slate-900 text-white">
+        <div className="flex">
+          <div className="flex flex-col gap-2 w-1/5 bg-slate-900 text-white">
             <div className="p-6 bg-slate-800">
               Logo
             </div>
